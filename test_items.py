@@ -9,7 +9,7 @@ link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
 
 def test_we_should_see_on_button_languages(browser):
     browser.get(link)
-    time.sleep(30)
+    # time.sleep(30)
     assert WebDriverWait(browser, 5).until(
-        ec.visibility_of_element_located((By.CSS_SELECTOR, ".btn.btn-lg.btn-primary.btn-add-to-basket"))
+        ec.visibility_of_element_located((By.CSS_SELECTOR, "button.btn-add-to-basket")), "Кнопа не найдена!"
     )
